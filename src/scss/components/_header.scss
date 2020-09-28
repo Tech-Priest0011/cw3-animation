@@ -1,0 +1,10 @@
+header {
+  background: white;
+  border-bottom: 1px var(--color-text-primary) solid;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

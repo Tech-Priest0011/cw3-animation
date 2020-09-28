@@ -1,0 +1,87 @@
+.menu-hamburger{
+  cursor: pointer;
+}
+
+.hamburger-simple{
+  .material-icons{
+    font-size: 8rem;
+    color: var(--color-text-primary);
+  }
+
+  .icon-close{
+    display: none;
+  }
+
+  &.open{
+    .icon-close{
+      display: block;
+    }
+    .icon-open{
+      display: none;
+    }
+  }
+}
+
+.hamburger-animated{
+  position: relative;
+
+  .material-icons{
+    font-size: 8rem;
+    color: var(--color-text-primary);
+  }
+
+  .icon-open, .icon-close {
+    transition: .3s transform ease-out;
+  }
+
+  .icon-close{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  &.open{
+    .icon-close{
+      transform: translate(-50%, -50%) scale(1);
+    }
+    .icon-open{
+      transform: scale(0);
+    }
+  }
+}
+
+.hamburger-funky{
+  span{
+    background: var(--color-text-primary);
+    display: block;
+    height: 12px;
+    width: 90px;
+    margin-bottom: 17px;
+    transition: .3s transform;
+
+    &:nth-child(1){
+      transform-origin: left top;
+    }
+    &:nth-child(2){
+      transform-origin: left top;
+    }
+    &:nth-child(3){
+      transform-origin: left bottom;
+    }
+  }
+
+  &.open{
+    span{
+      &:nth-child(1){
+        transform: rotate(45deg);
+      }
+      &:nth-child(2){
+        transform: scaleX(0);
+      }
+      &:nth-child(3){
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
